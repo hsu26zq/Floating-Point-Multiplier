@@ -9,18 +9,18 @@ Completion Date: *2024-05*
     │   └── fp_mul_report_ch.pdf         # Final Report of this Project Written in Chinese.
     │
     ├── src/
-    │   ├── Netlist/                     # SPICE Netlist
-    │   │   ├── FP_MUL_syn.v             # Digitally-Controlled Ocsillator
-    │   │   └── TEST_gate.v              # Phase Frequency Detector
+    │   ├── Netlist/                     # Synthesis result
+    │   │   ├── FP_MUL_syn.v             # Synthesized netlist
+    │   │   └── TEST_gate.v              # Gate-Level testbench
     │   │
     │   └── RTL/                         # Verilog RTL Code
-    │       ├── FP_MUL.v                 # Controller
-    │       ├── FP_MUL_old.v             # Digitally-Controlled Oscillator
-    │       ├── TEST.v                   # Divider
-    │       ├── TEST_TREE.v              # Phase Frequency Detector
-    │       ├── TREE.v                   # Test module
-    │       ├── pattern.dat              # Test module
-    │       └── pattern.py               # Top module
+    │       ├── FP_MUL.v                 # Multiplier
+    │       ├── FP_MUL_old.v             # Old design
+    │       ├── TEST.v                   # RTL testbench
+    │       ├── TEST_TREE.v              # Wallace tree testbench
+    │       ├── TREE.v                   # Wallace tree
+    │       ├── pattern.dat              # Test pattern
+    │       └── pattern.py               # Test pattern generation
     │
     └── README.md
 

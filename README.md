@@ -3,6 +3,10 @@
 This is the final project of the course "Design of Digital Integrated Circuits and Systems" at CCU CS.
 
 Completion Date: *2024-05*
+
+## Architecture
+![pic1](https://github.com/hsu26zq/fp-multiplier/assets/95536686/4ce3b6dd-5ce2-4a72-850d-66bb9e54f2ac)
+
 ## Folder Structure
     .
     ├── doc/

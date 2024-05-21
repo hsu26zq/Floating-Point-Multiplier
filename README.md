@@ -28,6 +28,6 @@ Completion Date: *2024-05*
     │
     └── README.md
 
-## APR 
+## APR (absence of I/O pads)
 ![image](https://github.com/hsu26zq/fp-multiplier/assets/95536686/7925417e-8155-42f2-bab6-96c918dfc3e1)
 

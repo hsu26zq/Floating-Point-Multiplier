@@ -5,7 +5,7 @@ This is the final project of the course "Design of Digital Integrated Circuits a
 Completion Date: *2024-05*
 
 ## Architecture
-![pic1](https://github.com/hsu26zq/fp-multiplier/assets/95536686/f7a1f41d-f5c6-4bff-97bf-38e4cb83fd94)
+![rsz_pic1](https://github.com/hsu26zq/fp-multiplier/assets/95536686/6b41fcfc-57c6-4ac1-b10e-929108656b3a)
 
 ## Folder Structure
     .

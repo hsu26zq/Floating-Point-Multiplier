@@ -29,4 +29,5 @@ Completion Date: *2024-05*
     └── README.md
 
 ## APR 
-![Screenshot 2024-05-21 224612](https://github.com/hsu26zq/fp-multiplier/assets/95536686/6369e3cb-6936-46da-b214-667f875e9870)
+![image](https://github.com/hsu26zq/fp-multiplier/assets/95536686/7925417e-8155-42f2-bab6-96c918dfc3e1)
+

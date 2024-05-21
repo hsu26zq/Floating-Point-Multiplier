@@ -1,7 +1,7 @@
 //------------------------------------------------------//
-//- Final Project										//
-//														//
-//- Pipelined Wallace Tree (TREE, CELL, FA modules)		//
+//- Final Project					//
+//							//
+//- Pipelined Wallace Tree (TREE, CELL, FA modules)	//
 //------------------------------------------------------//
 
 `timescale 1ns/1ps

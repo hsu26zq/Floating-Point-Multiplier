@@ -27,3 +27,6 @@ Completion Date: *2024-05*
     │       └── pattern.py               # Test pattern generation
     │
     └── README.md
+
+## APR 
+![Screenshot 2024-05-21 224612](https://github.com/hsu26zq/fp-multiplier/assets/95536686/6369e3cb-6936-46da-b214-667f875e9870)

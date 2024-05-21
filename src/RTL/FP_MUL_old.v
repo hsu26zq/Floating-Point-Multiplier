@@ -1,7 +1,7 @@
 //------------------------------------------------------//
-//- Final Project										//
-//														//
-//- Floating Point Number Multiplier					//
+//- Final Project					//
+//							//
+//- Floating Point Number Multiplier			//
 //------------------------------------------------------//
 
 `timescale 1ns/1ps

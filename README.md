@@ -23,8 +23,3 @@ Completion Date: *2024-05*
     │       └── pattern.py               # Test pattern generation
     │
     └── README.md
-
-## Output Waveform ( Reference Clock = 400MHz, Divisor = 7) 
-![Screenshot 2024-05-08 000953](https://github.com/hsu26zq/game/assets/95536686/bac4c97c-5a88-4496-a7f9-e0c2931c96c3)
-
-

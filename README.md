@@ -27,8 +27,3 @@ Completion Date: *2024-05*
     │       └── pattern.py               # Test pattern generation
     │
     └── README.md
-
-## APR result (absence of I/O pads)
-![Screenshot 2024-05-21 224612](https://github.com/hsu26zq/fp-multiplier/assets/95536686/241ef7cc-bb69-4d27-a0a4-9a2378d1e464)
-
-

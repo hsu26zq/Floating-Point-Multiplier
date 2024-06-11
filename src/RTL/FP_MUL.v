@@ -1,11 +1,13 @@
 //------------------------------------------------------//
 //- Final Project					//
 //							//
-//- Floating Point Number Multiplier			//
+//- Floating Point Number Multiplier		        //
 //------------------------------------------------------//
 
 `timescale 1ns/1ps
 `include "TREE.v"
+
+`define DONE 6'd55
 
 module FP_MUL(input		  CLK,
 			  input		  RESET,
@@ -44,7 +46,7 @@ always @(*)
 			else 
 				next_state = FETCH;
 		CAL: // Calculate
-			if(counter == 6'd50) // 50 cycles
+          if(counter == `DONE) // 50 cycles
 				next_state = OUT;
 			else 
 				next_state = CAL;
@@ -79,7 +81,7 @@ always @(posedge CLK)
 				end
 			end
 			CAL: begin
-				if(counter == 6'd50) // 50 cycles
+              if(counter == `DONE) // 50 cycles
 					counter <= 6'b0;
 				else
 					counter <= counter + 1;
@@ -277,7 +279,7 @@ RCA_52x1 RCA_52x1_2(.CLK( CLK ), .A( DENORM_OP1 ), .Cin( DENORM_OP2 ), .S( DENOR
 
 wire [12:0] RENORMALIZED_EXPONENT;
 
-RCA_13x2 RCA_13x2(.CLK( CLK ), .A( NORMALIZED_EXPONENT ), .B( triggerA ),.Cin( triggerB ), .S( RENORMALIZED_EXPONENT ), .Cout());
+  RCA_13x2 RCA_13x2(.CLK( CLK ), .A( NORMALIZED_EXPONENT ), .B( {12'b0, triggerA} ),.Cin( triggerB ), .S( RENORMALIZED_EXPONENT ), .Cout());
 
 wire [10:0] INDEX3;
 
@@ -360,6 +362,7 @@ module RCA_11x2(CLK, A, B, Cin, S, Cout);
 	output Cout;
 
 	wire [2:0] TEMP_C;
+  	wire EMPTY;
 	genvar i;
 
 	generate
@@ -367,8 +370,8 @@ module RCA_11x2(CLK, A, B, Cin, S, Cout);
 	for(i = 1; i < 3; i = i + 1)
 		FA U2(.CLK( CLK ), .A( A[(i*3)+2:i*3] ), .B( B[(i*3)+2:i*3] ), .Cin( TEMP_C[i-1] ),
 							.S( S[(i*3)+2:i*3] ), .Cout( TEMP_C[i] ));
-	FA U3(.CLK( CLK ), .A( {2'b0, A[10:9]} ), .B( {2'b0, B[10:9]} ), .Cin( TEMP_C[2] ),
-						.S( {S[10:9]} ), .Cout( Cout ));
+      FA U3(.CLK( CLK ), .A( {1'b0, A[10:9]} ), .B( {1'b0, B[10:9]} ), .Cin( TEMP_C[2] ),
+            .S( {EMPTY , S[10:9]} ), .Cout( Cout ));
 	endgenerate
 endmodule
 
@@ -382,6 +385,7 @@ module RCA_13x2(CLK, A, B, Cin, S, Cout);
 	output Cout;
 
 	wire [10:0] TEMP_C;
+    wire [1:0] EMPTY;
 	genvar i;
 
 	generate
@@ -390,7 +394,7 @@ module RCA_13x2(CLK, A, B, Cin, S, Cout);
 		FA U2(.CLK( CLK ), .A( A[(i*3)+2:i*3] ), .B( B[(i*3)+2:i*3] ), .Cin( TEMP_C[i-1] ),
 							.S( S[(i*3)+2:i*3] ), .Cout( TEMP_C[i] ));
 	FA U3(.CLK( CLK ), .A( {2'b0, A[12]} ), .B( {2'b0, B[12]} ), .Cin( TEMP_C[3] ), // Sign Extension (-1023)
-						.S( {S[12]} ), .Cout( Cout ));
+          .S( {EMPTY, S[12]} ), .Cout( Cout ));
 	endgenerate
 endmodule
 
@@ -438,12 +442,13 @@ module RCA_52x1(CLK, A, Cin, S, Cout);
 	output Cout;
 
 	wire [17:0] TEMP_C;
+    wire [1:0] EMPTY;
 	genvar i;
 
 	generate
 	HA U1(.CLK( CLK ), .A( A[2:0] ), .Cin( Cin ), .S( S[2:0] ), .Cout( TEMP_C[0] ));
 	for(i = 1; i < 17; i = i + 1)
 		HA U2(.CLK( CLK ), .A( A[(i*3)+2:i*3] ), .Cin( TEMP_C[i-1] ), .S( S[(i*3)+2:i*3] ), .Cout( TEMP_C[i] ));
-	HA U3(.CLK( CLK ), .A( {2'b0, A[51]} ), .Cin( TEMP_C[16] ), .S( {S[51]} ), .Cout( TEMP_C[17] ));
+      HA U3(.CLK( CLK ), .A( {2'b0, A[51]} ), .Cin( TEMP_C[16] ), .S( {EMPTY[1], EMPTY[0], S[51]} ), .Cout( TEMP_C[17] ));
 	endgenerate
 endmodule

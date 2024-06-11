@@ -6,7 +6,7 @@
 
 `timescale 1ns/1ps
 
-`include "FP_MUL.v"
+`include "../FP_MUL.v"
 `include "my_env.sv"
 `include "my_interface.sv"
 

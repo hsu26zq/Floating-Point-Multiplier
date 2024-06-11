@@ -62,7 +62,7 @@ endclass
     
     task my_driver::OPEN_FILE;
       begin
-        FILE = $fopen("PATTERN.dat", "r");
+        FILE = $fopen("../PATTERN.dat", "r");
         if(!FILE) begin
           $display("Unable to Open File.");
           $finish;

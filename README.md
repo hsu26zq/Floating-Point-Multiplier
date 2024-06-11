@@ -18,6 +18,14 @@ Completion Date: *2024-05*
     │   │   └── TEST_gate.v              # Gate-Level testbench
     │   │
     │   └── RTL/                         # Verilog RTL Code
+    │       ├── UVM/                     # UVM Verification (unfinished)
+    │       │   ├── my_driver.sv         # Driver
+    │       │   ├── my_env.sv            # Environment
+    │       │   ├── my_interface.sv      # Interface
+    │       │   ├── my_monitor.sv        # Monitor
+    │       │   ├── my_transaction.sv    # Transaction
+    │       │   └── testbench.sv         # Testbench
+    │       │
     │       ├── FP_MUL.v                 # Multiplier
     │       ├── FP_MUL_old.v             # Old design
     │       ├── TEST.v                   # RTL testbench

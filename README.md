@@ -1,6 +1,5 @@
 # IEEE-754 Double-Precision Floating-Point Multiplier
-
-This is the final project of the course "Design of Digital Integrated Circuits and Systems" at CCU CS.
+Floating-Point Multiplier Designed in a Pipelined Wallace tree Architecture
 
 Completion Date: *2024-05*
 

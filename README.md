@@ -1,4 +1,4 @@
-# IEEE 754 Double-Precision Pipelined Floating-Point Multiplier
+# IEEE 754 Double-Precision Floating-Point Pipelined　Multiplier
 Floating-point multiplier designed in a pipelined wallace tree architecture.
 
 Completion Date: *2024-05*

@@ -4,7 +4,8 @@ Floating-point multiplier designed in a pipelined wallace tree architecture.
 ## Folder Structure
     .
     ├── doc/
-    │   └── fp_mul_report_ch.pdf         # Final Report of this Project Written in Chinese.
+    │   ├── doc_en.pdf
+    │   └── doc_ch.pdf
     │
     ├── src/
     │   ├── Netlist/                     # Synthesis result

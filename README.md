@@ -1,11 +1,6 @@
 # IEEE 754 Double-Precision Floating-Point Pipelined Multiplier
 Floating-point multiplier designed in a pipelined wallace tree architecture.
 
-Completion Date: *2024-05*
-
-## Architecture
-![rsz_pic1](https://github.com/hsu26zq/fp-multiplier/assets/95536686/6b41fcfc-57c6-4ac1-b10e-929108656b3a)
-
 ## Folder Structure
     .
     ├── doc/
